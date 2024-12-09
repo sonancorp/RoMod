@@ -1,0 +1,19 @@
+{
+    "apps": [
+        {
+            "name":"test",
+            "icon":"https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg",
+            "file":"/files/test.zip"
+        },
+        {
+            "name":"epic games",
+            "icon":"https://img.freepik.com/free-photo/funny-monkey-with-hat-studio_23-2150844087.jpg",
+            "file":"/assets/json/mods.json"
+        },
+        {
+            "name":"test3",
+            "icon":"https://img.freepik.com/free-photo/funny-monkey-with-hat-studio_23-2150844087.jpg",
+            "file":"/files/test.zip"
+        }
+    ]
+}

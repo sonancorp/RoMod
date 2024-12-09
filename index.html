@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoMod - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div style="display: flex; flex-direction: row; align-items: center; font-weight: bold;">
+            <img src="assets/images/logo.png" alt="" class="logo">
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row; height: 100%; width: 100%;">
+        <div class="sidebar">
+            <div class="userdis">
+                <img src="assets/images/profile.png" alt="">
+                <h2 style="font-weight: lighter;" id="userdis">nun</h2>
+            </div>
+            <div class="options">
+                <div class="icons">
+                    <img src="assets/images/home.png" alt="">
+                    <label>Home</label>
+                </div>
+                <div class="icons" onclick="document.getElementById('block').style.display = 'block'; document.getElementById('cm').style.display = 'flex';">
+                    <img src="assets/images/create.png" alt="">
+                    <label>Create Local Mod</label>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="down">
+            
+        </div>
+        <div class="block" id="block">
+        </div>
+        <div class="createmenu" id="cm">
+            <h1 style="font-weight: lighter;">Create</h1>
+            <hr>
+            <input type="text" id="title" placeholder="Name">
+            <input type="text" id="loc" placeholder="Icon (URL)">
+            <div id="dropzone">
+                Drop
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        setInterval(() => {
+            if(localStorage.getItem("currentUser")) {
+                document.getElementById("userdis").textContent = localStorage.getItem("currentUser");
+            }
+            else {
+                window.location.href = "signin.html"
+            }
+        }, 100);
+    </script>
+</body>
+</html>

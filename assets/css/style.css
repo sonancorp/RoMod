@@ -1,0 +1,206 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: rgb(16, 16, 16);
+    height: 100vh;
+    color: white;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.topbar {
+    width: 100%;
+    color: white;
+    padding: 10pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.logo {
+    width: 20pt;
+}
+
+.sidebar {
+    border-right: 2px solid rgb(65, 65, 65);
+    width: 200pt;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10pt;
+}
+
+.userdis {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.userdis img {
+    width: 40pt;
+    border-radius: 100pt;
+}
+
+.userdis > * {
+    margin-left: 5pt;
+}
+
+.options {
+    margin: 10pt;
+    display: flex;
+    flex-direction: column;
+}
+
+.options > * {
+    margin-top: 10pt;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    
+}
+
+.icons:hover {
+    opacity: 0.5;
+}
+
+.icons img {
+    width: 15pt;
+}
+
+.icons > * {
+    margin-left: 5pt;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin: 10pt;
+    padding: 10pt;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content > * {
+    margin: 5pt;
+}
+
+.app {
+    border: 2px solid  wheat;
+    width: 100pt;
+    height: 100pt;
+    border-radius: 10pt;
+    background-image: url('https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 5pt;
+    display: flex;
+    flex-direction: column;
+}
+
+.app button {
+    float: right;
+    background-color: rgb(0, 145, 255);
+    color: white;
+    border-radius: 20pt;
+    border: 1px solid rgb(0, 145, 255);
+    font-weight: bold;
+    margin-top: 70pt;
+}
+
+.app button:hover {
+    background-color: rgb(0, 99, 174);
+    border: 1px solid rgb(0, 99, 174);
+    cursor: pointer;
+}
+
+.createmenu {
+    position: fixed;
+    top: 20%;
+    background-color: rgb(27, 27, 27);
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300pt;
+    border-radius: 10pt;
+    padding: 10pt;
+    flex-direction: column;
+    display: none;
+}
+
+.createmenu input {
+    background-color: rgb(45, 45, 45);
+    border: 1px solid rgb(45, 45, 45);
+    color: white;
+    width: 90%;
+    border-radius: 20pt;
+    margin-top: 10pt;
+}
+
+.block {
+    position: fixed;
+    top: 0%;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    display: none;
+}
+
+#dropzone {
+    border: 2px solid rgb(65, 65, 65);
+    height: 200pt;
+    border-radius: 10pt;
+    padding: 10pt;
+    margin-top: 10pt;
+    color: rgb(65, 65, 65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.us {
+    border:  2px solid rgb(65, 65, 65);
+    position: absolute;
+    border-radius: 10px;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10pt;
+    top: 20%;
+    height: 300pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.us input {
+    background-color: rgb(45, 45, 45);
+    border: 1px solid rgb(45, 45, 45);
+    color: white;
+    width: 90%;
+    border-radius: 20pt;
+    margin-top: 10pt;
+}
+
+.us button {
+    float: right;
+    background-color: rgb(0, 145, 255);
+    color: white;
+    border-radius: 20pt;
+    border: 1px solid rgb(0, 145, 255);
+    font-weight: bold;
+    margin-top: 70pt;
+}
+
+.us button:hover {
+    background-color: rgb(0, 99, 174);
+    border: 1px solid rgb(0, 99, 174);
+    cursor: pointer;
+}
